@@ -1,7 +1,8 @@
 angular.module('userProfiles')
+.controller('profileCtrl', function( $scope, friendService) {
+	friendService.getFriends().then(function(userInfo){
 
-
-.controller('profileCtrl', function( $scope,friendService ) {
-	$scope.currentUser = friendService.currentUser;
-	$scope.friends = friendService.friends;
+		$scope.currentUser = userInfo.currentUser;
+		$scope.friends = userInfo.friends;
+	})
 });

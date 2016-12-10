@@ -1,3 +1,4 @@
+
 angular.module('userProfiles')
 .controller('mainCtrl', function( $scope, friendService, $location ) {
 
